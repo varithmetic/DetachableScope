@@ -189,7 +189,7 @@ struct Main
         eWeaponType currentWeapType = currentWeapon.m_eWeaponType;
         unsigned int currentWeapAmmo = currentWeaponRef.m_nAmmoTotal;
 
-        if (alive) {
+        if (alive && !player->bInVehicle) {
             if (isSniper(currentWeapType)) {
                 if (lastWeapType != currentWeapType) {
                     if (currentWeapType == WEAPONTYPE_SNIPERRIFLE) {
